@@ -44,7 +44,7 @@ function App() {
 	return (
 		<div className="App container py-5">
 
-		  <h1 className="mb-4">NOTES APP</h1>
+		 	<h1 className="mb-4">NOTES APP</h1>
 
 			<form
 				className="border p-3 pb-4 my-5 bg-light"
