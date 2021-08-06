@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 
+
+/* MAIN FOO */
+
 function App() {
 
 	let def = [
@@ -58,74 +61,78 @@ function App() {
 				className="border p-3"
 				style={{ maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto'  }}
 			>
+
         <ul
-					className="nav nav-pills mb-3 justify-content-center"
-					id="pills-tab"
-					role="tablist"
+			className="nav nav-pills mb-3 justify-content-center"
+			id="pills-tab"
+			role="tablist"
+		>
+			<li
+				className="nav-item"
+				role="presentation"
+			>
+				<button
+					className="nav-link active"
+					id="pills-home-tab"
+					data-bs-toggle="pill"
+					data-bs-target="#pills-home"
+					type="button"
+					role="tab"
+					aria-controls="pills-home"
+					aria-selected="true"
 				>
-          <li
-					className="nav-item"
-					role="presentation"
-					>
-            <button
-							className="nav-link active"
-							id="pills-home-tab"
-							data-bs-toggle="pill"
-							data-bs-target="#pills-home"
-							type="button"
-							role="tab"
-							aria-controls="pills-home"
-							aria-selected="true"
-						>
-							Current
-						</button>
-          </li>
-          <li
-						className="nav-item"
-						role="presentation"
-					>
-            <button
-							className="nav-link"
-							id="pills-profile-tab"
-							data-bs-toggle="pill"
-							data-bs-target="#pills-profile"
-							type="button" role="tab"
-							aria-controls="pills-profile"
-							aria-selected="false"
-						>
-							Completed
-						</button>
-          </li>
+					Current
+				</button>
+			</li>
+			<li
+				className="nav-item"
+				role="presentation"
+			>
+				<button
+					className="nav-link"
+					id="pills-profile-tab"
+					data-bs-toggle="pill"
+					data-bs-target="#pills-profile"
+					type="button" role="tab"
+					aria-controls="pills-profile"
+					aria-selected="false"
+				>
+					Completed
+				</button>
+			</li>
+
         </ul>
+
         <div className="tab-content" id="pills-tabContent">
-          <div
-						className="tab-pane fade show active"
-						id="pills-home"
-						role="tabpanel"
-						aria-labelledby="pills-home-tab"
-					>
-						<RenderNotes
-							notes = { notes }
-							setNotes = { setNotes }
-							showComplete = { false }
-							count = { count }
-							setCount = { setCount }
-						/>
-					</div>
-          <div
-						className="tab-pane fade"
-						id="pills-profile"
-						role="tabpanel"
-						aria-labelledby="pills-profile-tab"
-					>
-						<RenderNotes
-							notes = { notes }
-							setNotes = { setNotes }
-							showComplete = { true }
-							count = { count }
-							setCount = { setCount }
-						/>
-					</div>
+			<div
+				className="tab-pane fade show active"
+				id="pills-home"
+				role="tabpanel"
+				aria-labelledby="pills-home-tab"
+			>
+				<RenderNotes
+					notes = { notes }
+					setNotes = { setNotes }
+					showComplete = { false }
+					count = { count }
+					setCount = { setCount }
+				/>
+			</div>
+
+			<div
+				className="tab-pane fade"
+				id="pills-profile"
+				role="tabpanel"
+				aria-labelledby="pills-profile-tab"
+			>
+				<RenderNotes
+					notes = { notes }
+					setNotes = { setNotes }
+					showComplete = { true }
+					count = { count }
+					setCount = { setCount }
+				/>
+			</div>
         </div>
       </div>
 
