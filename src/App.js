@@ -62,7 +62,7 @@ function App() {
 				style={{ maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto'  }}
 			>
 
-        <ul
+				<ul
 					className="nav nav-pills mb-3 justify-content-center"
 					id="pills-tab"
 					role="tablist"
@@ -101,9 +101,9 @@ function App() {
 						</button>
 					</li>
 
-        </ul>
+				</ul>
 
-        <div className="tab-content" id="pills-tabContent">
+				<div className="tab-content" id="pills-tabContent">
 					<div
 						className="tab-pane fade show active"
 						id="pills-home"
@@ -133,8 +133,8 @@ function App() {
 							setCount = { setCount }
 						/>
 					</div>
-        </div>
-      </div>
+				</div>
+			</div>
 
 		</div>
 	);
