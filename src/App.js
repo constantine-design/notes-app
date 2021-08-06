@@ -180,6 +180,7 @@ function RenderNotes(args) {
 					</button>
 				</div>
 			))}
+			
 		</div>
 	);
 }
