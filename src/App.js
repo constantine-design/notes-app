@@ -18,7 +18,8 @@ function App() {
 	];
 
 	const [ notes, setNotes ] = useState( def );
-	const [ count, setCount ] = useState(0);
+
+	const [ count, setCount ] = useState(0); // UNNECECARY STATE FOR TRIGGERING CHANGES
 
 	function addNewNote(e) {
 		e.preventDefault();
@@ -36,18 +37,6 @@ function App() {
 		e.target.reset();
 	}
 
-	function remooveNote( id ) {
-		setNotes( notes.filter( (x) => x.id !== id ) );
-		setCount( count + 1 );
-	}
-
-	function toggleNote( id ) {
-		const ourInd = notes.findIndex( (o) => o.id == id );
-		let newNotes = notes;
-		newNotes[ourInd].isComplete = !(notes[ourInd].isComplete);
-		setNotes( newNotes );
-		setCount( count + 1 );
-	}
 
 	return (
 		<div className="App container py-5">
@@ -145,7 +134,7 @@ function App() {
 }
 
 
-/* RENDER FOO */
+/* RENDERING NOTES LIST */
 
 function RenderNotes(args) {
 
